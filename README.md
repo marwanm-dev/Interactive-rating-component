@@ -1,10 +1,11 @@
 # Interactive-rating-component
 
-- Created with React, Tailwind & Styled Components using *vite*🔥
+- Fully responsive & animated
 
-- Fully responsive and animated
-
-- Additional stuff (hovers, animations, effects, etc...)
+- Tech used with *vite*🔥:
+  React
+  Tailwind & Styled Components
+  Framer motion
 
 # Live
 
@@ -13,5 +14,3 @@
 # Credit
 
 - Inspired by Frontend Mentor
-
-- Website: https://frontendmentor.io
