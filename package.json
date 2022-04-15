@@ -1,5 +1,5 @@
 {
-  "name": "generator-vite-react-vanilla",
+  "name": "interactive-rating-component",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
