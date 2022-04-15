@@ -1,8 +1,10 @@
 import tw, { styled } from 'twin.macro';
+import card from '../../animations/card';
+import { motion } from 'framer-motion';
 
 const ThankYou = ({ selectedOption }) => {
   return (
-    <Wrapper>
+    <Wrapper variants={card} initial='hidden' animate='shown' exit='exit'>
       <Illustration />
       <RateSelection>You selected {selectedOption} out of 5</RateSelection>
       <Heading>Thank you!</Heading>
@@ -14,7 +16,7 @@ const ThankYou = ({ selectedOption }) => {
   );
 };
 
-const Wrapper = tw.div`text-center space-y-xmd`;
+const Wrapper = tw(motion.div)`text-center space-y-xmd`;
 
 const RateSelection = tw.div`text-orange bg-dark-blue w-max mx-auto rounded-full px-4 py-1`;
 

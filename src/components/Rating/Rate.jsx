@@ -1,11 +1,14 @@
 import tw, { styled } from 'twin.macro';
+import card from '/src/animations/card';
+import option from '/src/animations/option';
+import { motion } from 'framer-motion';
 
 const Rate = ({ setIsRating, selectedOption, setSelectedOption }) => {
-  const handleClick = () => setIsRating(false);
+  const handleClick = () => selectedOption && setIsRating(false);
   const handleSelection = e => setSelectedOption(e.target.getAttribute('data-key'));
 
   return (
-    <Wrapper>
+    <Wrapper variants={card} initial='hidden' animate='shown' exit='exit'>
       <Logo>
         <Img />
       </Logo>
@@ -15,8 +18,13 @@ const Rate = ({ setIsRating, selectedOption, setSelectedOption }) => {
         improve our offering!
       </Desc>
       <Options>
-        {[1, 2, 3, 4, 5].map(num => (
+        {[1, 2, 3, 4, 5].map((num, i) => (
           <Option
+            variants={option}
+            custom={i}
+            initial='hidden'
+            animate='shown'
+            exit='exit'
             onClick={handleSelection}
             key={num}
             data-key={num}
@@ -30,7 +38,7 @@ const Rate = ({ setIsRating, selectedOption, setSelectedOption }) => {
   );
 };
 
-const Wrapper = tw.div`flex flex-col justify-between items-start gap-xmd`;
+const Wrapper = tw(motion.div)`flex flex-col justify-between items-start gap-xmd`;
 
 const Logo = tw.div`w-12 h-12 rounded-full bg-med-blue flex justify-center items-center`;
 
@@ -41,11 +49,9 @@ const Img = styled.img.attrs({
 const Heading = tw.h1`text-white`;
 const Desc = tw.p`text-light-grey`;
 
-const Options = styled.div`
-  ${tw`flex justify-between items-center gap-sm max-w-full`}
-`;
+const Options = tw.div`flex justify-between items-center gap-sm max-w-full`;
 
-const Option = styled.button`
+const Option = styled(motion.button)`
   ${tw`w-14 h-14 bg-med-blue text-light-grey font-bold rounded-full flex justify-center items-center hover:(text-white bg-light-grey)`}
   ${({ selected }) => selected && tw`bg-orange text-white hover:bg-orange`}
 `;
