@@ -9,7 +9,7 @@
 
 # Live
 
-- https://marodevv-interactive-rating-component.pages.dev/
+- https://marodevv-interactive-rating-component.vercel.app
 
 # Credit
 
