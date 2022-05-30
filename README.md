@@ -1,16 +1,17 @@
 # Interactive-rating-component
 
-- Fully responsive & animated
+## Tech used with *vite*🔥:
 
-- Tech used with *vite*🔥:
-  React
-  Tailwind & Styled Components
-  Framer motion
+> Frontend
 
-# Live
+-   React
+-   Tailwind & Styled Components
+-   Framer motion
 
-- https://marodevv-interactive-rating-component.vercel.app
+## Live
 
-# Credit
+> https://marodevv-interactive-rating-component.vercel.app
 
-- Inspired by Frontend Mentor
+## Credit
+
+> Inspired by Frontend Mentor
