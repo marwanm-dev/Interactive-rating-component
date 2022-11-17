@@ -11,7 +11,7 @@
 
 ## Live
 
-> https://marodevv-interactive-rating-component.vercel.app
+> https://marwanmodev-interactive-rating-component.vercel.app
 
 ## Credit
 
